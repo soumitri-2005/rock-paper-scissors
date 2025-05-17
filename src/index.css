@@ -1,17 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Playwrite+MX+Guides&family=Rubik+Dirt&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Rubik+Dirt&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-        box-sizing: border-box;
-overflow-x: hidden;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 :root {
-    --rock-font: "Rubik Dirt", system-ui;
-    --paper-font: "Playwrite MX Guides", cursive;
-    --scissor-font: "Audiowide", sans-serif;
+  --font-one: "Rubik Dirt", system-ui;
+  --font-two: "Pixelify Sans", sans-serif;
 }
