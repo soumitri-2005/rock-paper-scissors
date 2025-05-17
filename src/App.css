@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.score-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  background-color: transparent;
+}
+
+.choice {
+  height: 500px;
+  width: 360px;
+}
+
+#rock {
+  height: 100%;
+}
+
+.choice #rock {
+  width: 112%;
+  height: 82%;
+  object-fit: cover;
+}
+
+.choice #paper {
+  width: 110%;
+  height: 111%;
+  object-fit: cover;
+}
+
+.choice #scissor {
+  width: 142%;
+  height: 98%;
+  object-fit: cover;
+}
