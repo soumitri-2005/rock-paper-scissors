@@ -8,9 +8,9 @@
 body {
   box-sizing: border-box;
   overflow-x: hidden;
+  background-color: #fcf6e9;
 }
 
 :root {
-  --font-one: "Rubik Dirt", system-ui;
-  --font-two: "Pixelify Sans", sans-serif;
+  --font-style: "Pixelify Sans", sans-serif;
 }

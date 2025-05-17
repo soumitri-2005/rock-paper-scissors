@@ -1,9 +1,9 @@
-// App.jsx
 import { useState } from "react";
 import "./App.css";
 import rockImg from "./images/rock-img.png";
 import paperImg from "./images/paper-img.png";
 import scissorImg from "./images/scissor-img.png";
+import headingImg from "./images/heading-img.png";
 
 function App() {
   const [userScore, setUserScore] = useState(0);
@@ -12,24 +12,24 @@ function App() {
   const [msgColor, setMsgColor] = useState("rgb(22, 22, 22)");
 
   const generateCompChoice = () => {
-    const options = ["rock", "paper", "scissor"];
+    const options = ["Rock", "Paper", "Scissor"];
     const ranIdx = Math.floor(Math.random() * 3);
     return options[ranIdx];
   };
 
   const drawGame = () => {
-    setMessage("Game was Draw. Play again!");
+    setMessage("Game was Draw. Play again! 🫠");
     setMsgColor("rgb(22, 22, 22)");
   };
 
   const showWinner = (userWin, userChoice, compChoice) => {
     if (userWin) {
-      setUserScore(prev => prev + 1);
-      setMessage(`You win! Your ${userChoice} beats ${compChoice}.`);
+      setUserScore((prev) => prev + 1);
+      setMessage(`You win! Your ${userChoice} beats ${compChoice} 👏`);
       setMsgColor("green");
     } else {
-      setCompScore(prev => prev + 1);
-      setMessage(`You Lose. ${compChoice} beats your ${userChoice}.`);
+      setCompScore((prev) => prev + 1);
+      setMessage(`You Lose. ${compChoice} beats your ${userChoice} 🥲`);
       setMsgColor("red");
     }
   };
@@ -41,12 +41,12 @@ function App() {
       drawGame();
     } else {
       let userWin = true;
-      if (userChoice === "rock") {
-        userWin = compChoice === "paper" ? false : true;
-      } else if (userChoice === "paper") {
-        userWin = compChoice === "scissor" ? false : true;
+      if (userChoice === "Rock") {
+        userWin = compChoice === "Paper" ? false : true;
+      } else if (userChoice === "Paper") {
+        userWin = compChoice === "Scissor" ? false : true;
       } else {
-        userWin = compChoice === "rock" ? false : true;
+        userWin = compChoice === "Rock" ? false : true;
       }
       showWinner(userWin, userChoice, compChoice);
     }
@@ -55,11 +55,9 @@ function App() {
   return (
     <>
       <div className="container">
-        <h1>
-          <span id="first">ROCK </span>
-          <span id="second">PAPER </span>
-          <span id="third">SCISSOR</span>
-        </h1>
+        <div className="head">
+          <img src={headingImg} className="heading" />
+        </div>
 
         <div className="score-board">
           <div className="score">
@@ -73,7 +71,9 @@ function App() {
         </div>
 
         <div className="msg-container">
-          <p id="msg" style={{ color: msgColor }}>{message}</p>
+          <p id="msg" style={{ color: msgColor }}>
+            {message}
+          </p>
         </div>
 
         <div className="choices">
@@ -83,9 +83,17 @@ function App() {
           <div className="choice" id="two" onClick={() => playGame("paper")}>
             <img src={paperImg} id="paper" />
           </div>
-          <div className="choice" id="three" onClick={() => playGame("scissor")}>
+          <div
+            className="choice"
+            id="three"
+            onClick={() => playGame("scissor")}
+          >
             <img src={scissorImg} id="scissor" />
           </div>
+        </div>
+
+        <div className="footer">
+          <p>Created by Soumitri Mishra 🌸</p>
         </div>
       </div>
     </>

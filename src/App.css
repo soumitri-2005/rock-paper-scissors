@@ -1,4 +1,5 @@
 .container {
+  position: relative;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -6,25 +7,16 @@
   align-items: center;
 }
 
-.container h1 {
-  font-size: 4rem;
-  text-align: center;
-  margin: 60px 0 5px 0;
-  font-family: var(--font-one);
-  text-shadow: 3px 3px #00000049;
-
+.head {
+  height: 100px;
+  width: 55%;
+  margin: 2rem 0 0 0;
 }
 
-.container h1 #first {
-  color: gray;
-}
-
-.container h1 #second {
-  color: brown;
-}
-
-.container h1 #third {
-  color: rgb(10, 33, 46);
+.heading {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .score-board {
@@ -32,9 +24,10 @@
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  margin: 1rem 0 0.8rem 0;
-  font-size: 1.2rem;
-  font-family: var(--font-two);
+  margin: 1rem 0 0.4rem 0;
+  font-size: 1.3rem;
+  font-family: var(--font-style);
+  font-weight: 600;
 }
 
 .score-board .score {
@@ -46,8 +39,9 @@
 }
 
 .msg-container #msg {
-  font-size: 1rem;
-  font-family: var(--font-two);
+  font-size: 1.2rem;
+  font-family: var(--font-style);
+  font-weight: 700;
 }
 
 .choices {
@@ -89,7 +83,7 @@
 }
 
 .choice #scissor {
-  height: 88%;
+  height: 85%;
   width: 92%;
 }
 
@@ -106,4 +100,17 @@
 #three {
   right: 110px;
   bottom: 48px;
+}
+
+.footer {
+  position: absolute;
+  left: 10px;
+  bottom: 15px;
+  rotate: 180deg;
+  font-family: var(--font-style);
+}
+
+.footer p {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
 }
